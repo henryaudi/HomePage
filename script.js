@@ -44,13 +44,21 @@ dropdownBtns.forEach((btn) => {
         const dropdownContent = this.nextElementSibling;
 
         dropdownArrow.classList.toggle('arrow-rotate');
+
+        // If the dropdown is currently shown, hide it
+        if (dropdownContent.classList.contains('menu-open')) {
+            dropdownContent.style.maxHeight = null;
+            this.setAttribute('aria-expanded', 'false');
+        } else {
+            // If the dropdown is currently hidden, show it
+            dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
+            this.setAttribute('aria-expanded', 'true');
+        }
+
         dropdownContent.classList.toggle('menu-open');
-        this.setAttribute(
-            'aria-expanded',
-            this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-        );
     });
 });
+
 
 //////////////////////////
 // Scrolling handler

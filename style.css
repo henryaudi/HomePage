@@ -19,6 +19,7 @@ body {
     font-weight: 300;
     color: #444;
     line-height: 1.9;
+    text-decoration-skip-ink: none;
 }
 
 /* navigation bar */
@@ -101,6 +102,10 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#left__name {
+    line-height: 1.0;
 }
 
 .left__bio {
@@ -187,12 +192,14 @@ h4 {
 /* Dropdown styles */
 
 .dropdown {
-    max-width: 13em;
+    /* max-width: 13em; */
     position: relative;
     width: 100%;
 }
 
 .dropdown-btn {
+    max-width: 13em;
+
     background: var(--color-primary);
     font-size: inherit;
     width: 100%;
@@ -218,7 +225,7 @@ h4 {
     width: 100%;
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.25s ease-in-out;
 }
 
 .dropdown-content li {
@@ -227,6 +234,10 @@ h4 {
     left: 100%;
     transition: 0.5s;
     transition-delay: calc(60ms * var(--delay));
+}
+
+.dropdown-content.menu-open {
+    width: 100%;
 }
 
 .dropdown-content.menu-open li {
