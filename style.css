@@ -22,6 +22,36 @@ body {
     text-decoration-skip-ink: none;
 }
 
+/* Root for all customized icons */
+.icon-customized {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*  Back-to-top button
+    src: https://mdbootstrap.com/docs/standard/extended/back-to-top/
+*/
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: rgba(255, 255, 255, 0.95);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+}
+
 /* navigation bar */
 .nav {
     position: relative;
@@ -104,6 +134,16 @@ h4 {
     align-items: center;
 }
 
+/* 
+   customized header for embedded header
+   which will be 1.25 times of the font-size
+    as the element font-size (1.25em)
+*/
+.h4-like {
+    font-size: 1em;
+    font-weight: 700;
+}
+
 #left__name {
     line-height: 1.0;
 }
@@ -114,6 +154,28 @@ h4 {
     margin-block-end: 1rem;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.left__urls {
+    width: 80%;
+    border-top: 1px solid lightgrey;
+}
+
+.left__urls ul li {
+    list-style-type: none;
+}
+
+.left__urls ul {
+    padding: 0;
+}
+
+.left__urls a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.left__urls a:hover {
+    text-decoration: underline; /* Adds an underline to the links when hovered over */
 }
 
 /* Right panel */
@@ -261,6 +323,81 @@ h4 {
     text-decoration: none;
 }
 
+/* Right Panel: Section--3 */
+
+.section--3__columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.section--3__column h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section--3__columns--lists > li {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.section--3__columns--lists > li > span {
+    margin-left: 0.5em;
+}
+
+
+.i--django {
+    /* Django Icon
+       src: https://www.svgrepo.com/svg/353657/django-icon
+    */
+    background-image: url('/images/django-icon-svgrepo-com.svg');
+}
+
+.i--express {
+    /* Express.js Icon
+       src: https://www.vectorlogo.zone/logos/expressjs/index.html
+    */
+    background-image: url('/images/expressjs-icon.svg');
+}
+
+.i--mongo {
+    /*  MongoDB Icon
+        src: https://www.svgrepo.com/svg/331488/mongodb
+    */
+    background-image: url('/images/mongodb-svgrepo-com.svg');
+}
+
+.i--mysql {
+    /*  MySQL Icon
+        src: https://www.svgrepo.com/svg/394296/mysql
+    */
+    background-image: url('/images/mysql-svgrepo-com.svg');
+}
+
+.i--curly {
+    /*  Curly braces
+        src: https://www.svgrepo.com/svg/376861/curly-braces
+    */
+    background-image: url('images/curly-braces-svgrepo-com.svg');
+}
+
+.i--autocad {
+    /*  AutoDesk Icon
+        src: https://www.svgrepo.com/svg/305763/autodesk
+    */
+    background-image: url('images/autodesk-svgrepo-com.svg');
+}
+
+.i--solidworks {
+    /*  Solidworks Icon
+        src: https://www.svgrepo.com/svg/508968/solidworks
+    */
+    background-image: url('images/solidworks-svgrepo-com.svg');
+}
+
+/* footer */
 .footer {
     display: flex;
     height: 30vh;
