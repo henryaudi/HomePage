@@ -6,6 +6,7 @@ const nav = document.querySelector(".nav");
 const dropdownBtns = document.querySelectorAll(".dropdown-btn");
 const navLinks = document.querySelector('.nav__links');
 const mybutton = document.getElementById("btn-back-to-top");
+const wrappers = document.querySelectorAll('.section--4_project_wrapper');
 
 //////////////////////////
 // Nav handler
@@ -99,3 +100,14 @@ mybutton.addEventListener("click", backToTop);
 function backToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
+/* Controls the height of section--4 height of the project body and shade */
+window.onload = function() {
+    wrappers.forEach(function(wrapper) {
+        const project = wrapper.querySelector('.section--4_project');
+        const shade = wrapper.querySelector('.section--4_shade');
+
+        shade.style.height = getComputedStyle(project).height;
+    });
+};

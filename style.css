@@ -145,7 +145,7 @@ h4 {
 }
 
 #left__name {
-    line-height: 1.0;
+    line-height: 1.25;
 }
 
 .left__bio {
@@ -177,6 +177,7 @@ h4 {
 .left__urls a:hover {
     text-decoration: underline; /* Adds an underline to the links when hovered over */
 }
+
 
 /* Right panel */
 
@@ -328,23 +329,29 @@ h4 {
 .section--3__columns {
     display: flex;
     justify-content: space-between;
-}
-
-
-.section--3__column h4 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-top: 1em;
 }
 
 .section--3__columns--lists > li {
     display: flex;
     align-items: center;
     margin-left: 1em;
+    margin-bottom: 1em;
 }
 
 .section--3__columns--lists > li > span {
     margin-left: 0.5em;
+}
+
+.section--3_column h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section--3__columns > .section--3_column > .h4-like,
+.section--3__columns > .section--3_column-end > .h4-like {
+    margin-bottom: 0.5em;
 }
 
 
@@ -395,6 +402,60 @@ h4 {
         src: https://www.svgrepo.com/svg/508968/solidworks
     */
     background-image: url('images/solidworks-svgrepo-com.svg');
+}
+
+
+/* Right panel section--4 */
+
+.section--4_project_wrapper {
+    display: grid;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.wrapper_start {
+    margin-top: 0.25em;
+}
+
+.section--4_project, .section--4_shade {
+    border-radius: 1em; 
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+}
+
+.section--4_project {
+    /* border: 3px solid var(--color-primary);   */
+    background-color: #fff;  
+    z-index: 3;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+.section--4_shade {
+    z-index: 1;
+    background: linear-gradient(to bottom, var(--color-primary), transparent);
+}
+
+.section--4_shade.right {
+    margin-left: 4em;
+}
+
+.section--4_project.right {
+    margin-left: 3em;
+}
+
+.section--4_description_body {
+    list-style-type: none;
+    padding-left: 1em;
 }
 
 /* footer */
