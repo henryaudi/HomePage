@@ -111,3 +111,24 @@ window.onload = function() {
         shade.style.height = getComputedStyle(project).height;
     });
 };
+
+/* Slide the section--4_project_wrapper upon scrolling */
+
+// Select all the wrappers
+const allWrappers = document.querySelectorAll('.section--4_project_wrapper');
+
+const slideWrapper = function(entries, observer) {};
+
+const wrapperObserver = new IntersectionObserver(entries =>{
+    entries.forEach(entry => {
+        entry.target.classList.toggle('show', entry.isIntersecting);
+        if (entry.isIntersecting) { wrapperObserver.unobserve(entry.target); }
+    });
+}, {
+    threshold: 0.25
+});
+
+allWrappers.forEach(wrapper => {
+    wrapperObserver.observe(wrapper);
+});
+

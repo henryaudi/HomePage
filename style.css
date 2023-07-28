@@ -136,8 +136,8 @@ h4 {
 
 /* 
    customized header for embedded header
-   which will be 1.25 times of the font-size
-    as the element font-size (1.25em)
+   which will be having the same font-size
+    as the element font-size (1em)
 */
 .h4-like {
     font-size: 1em;
@@ -404,6 +404,13 @@ h4 {
     background-image: url('images/solidworks-svgrepo-com.svg');
 }
 
+.i--drone {
+    /*  Drone Icon
+        src: https://www.svgrepo.com/svg/5339/drone
+    */
+    background-image: url('images/drone-svgrepo-com.svg');
+}
+
 
 /* Right panel section--4 */
 
@@ -415,6 +422,25 @@ h4 {
     margin-top: 2em;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+    opacity: 0;
+
+    transform: translateX(-100px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* .section--4_project_wrapper.left {
+    transform: translateX(-100px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.section--4_project_wrapper.right {
+    transform: translateX(-100px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+} */
+
+.section--4_project_wrapper.show {
+    opacity: 100;
+    transform: translateX(0);
 }
 
 .wrapper_start {
@@ -429,7 +455,7 @@ h4 {
 }
 
 .section--4_project {
-    /* border: 3px solid var(--color-primary);   */
+    border: 3px solid var(--color-primary);  
     background-color: #fff;  
     z-index: 3;
     padding-left: 1em;
@@ -458,12 +484,21 @@ h4 {
     padding-left: 1em;
 }
 
+.section--4_description_header {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
 /* footer */
 .footer {
     display: flex;
     height: 30vh;
     justify-content: space-between;
     background-color: var(--color-primary);
+    overflow: hidden;
 }
 
 .footer__note, footer > div > h2 {
@@ -472,11 +507,33 @@ h4 {
 
 .column {
     flex: 1;
-    padding: 1rem;
     margin-left: 3rem;
+}
+
+.column > h2  {
+    margin-top: 0.25em;
 }
 
 .footer__note.col-1 > span > a {
     color: inherit;
     text-decoration: underline;
+}
+
+.footer__note.col-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer__author_wrapper {
+    margin-top: auto;
+}
+
+.footer__author {
+    text-align: center;
+    color: gainsboro;
+    font-size: small;
+    /* padding-bottom: 10px; */
 }
